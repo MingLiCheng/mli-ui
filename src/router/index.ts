@@ -13,6 +13,16 @@ const routes: Array<RouteConfig> = [
     meta: {}
   },
   {
+    path: '/icon',
+    name: 'icon',
+    component: () => import(/* webpackChunkName: "button" */ '../views/icon/index.vue')
+  },
+  {
+    path: '/button',
+    name: 'Button',
+    component: () => import(/* webpackChunkName: "button" */ '../views/button/index.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

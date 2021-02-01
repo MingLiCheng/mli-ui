@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 import 'normalize.css/normalize.css'
+import '@/assets/styles/fonts/iconfont.css' // 字体
 
 import * as directives from '@/directives'
 import * as filters from '@/filters'
