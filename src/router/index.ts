@@ -28,6 +28,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "button" */ '../views/message/index.vue')
   },
   {
+    path: '/radio',
+    name: 'Radio',
+    component: () => import(/* webpackChunkName: "button" */ '../views/radio/index.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
