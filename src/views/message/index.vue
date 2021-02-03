@@ -5,14 +5,14 @@
 
     <div @click="test">按钮</div>
     <div @click="colse">关闭</div>
-    <div style="margin: 20px; border: 1px solid #eaeefb">
+    <div style="margin: 20px; border: 1px solid #eaeefb; padding:20px">
       <MliButton type="success" @click="showMessage('success')">成功</MliButton>
       <MliButton type="warning" @click="showMessage('warning')">警告</MliButton>
       <MliButton type="danger" @click="showMessage('danger')">危险/错误</MliButton>
       <MliButton type="info" @click="showMessage('info')">主要</MliButton>
     </div>
     <h2>可关闭的</h2>
-    <div style="margin: 20px; border: 1px solid #eaeefb">
+    <div style="margin: 20px; border: 1px solid #eaeefb; padding:20px">
       <MliButton @click="showMessage('success', { showClose: true })">成功</MliButton>
       <MliButton @click="showMessage('warning', { showClose: true })">警告</MliButton>
       <MliButton @click="showMessage('danger', { showClose: true })">危险/错误</MliButton>

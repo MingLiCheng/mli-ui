@@ -1,6 +1,12 @@
 <template>
   <transition name="mli-message-fade" @after-leave="handleAfterLeave">
-    <div v-show="visible" :class="['mli-message', type ? 'mli-message--' + type : '']">
+    <div
+      v-show="visible"
+      :class="['mli-message', type ? 'mli-message--' + type : '']"
+      :style="{ top: verticalOffset + 'px' }"
+      @mouseenter="clearTimer"
+      @mouseleave="startTimer"
+    >
       <i :class="typeIconClass" v-if="isShowIcon"></i>
       <span class="mli-message__content">
         {{ message }}
@@ -27,45 +33,51 @@ const TypeMap: Indexable<string> = {
 @Component
 export default class MliMessage extends Vue {
   @Prop({ type: Boolean, default: true }) private isShowIcon!: boolean
-  private type!: string
-  private showClose!: boolean
   private message!: string
+  private type = 'info'
   private visible = false
   private closed = false
+  private showClose = false
+  private verticalOffset = 20
   private onClose: null | Function = null
+  private duration = 2000
+  private timer: any = null
+
+  mounted() {
+    this.startTimer()
+  }
+
+  clearTimer() {
+    clearTimeout(this.timer)
+  }
+
+  startTimer() {
+    if (this.duration > 0) {
+      this.timer = setTimeout(() => {
+        !this.closed && this.close()
+      }, this.duration)
+    }
+  }
 
   get typeIconClass() {
     return this.type ? `mli-message__icon mli-icon-${TypeMap[this.type]}` : ''
   }
 
-  @Watch('$route', { immediate: true })
-  onChangeRoute(newRoute: any) {
-    console.log('newRoute', newRoute)
+  close() {
+    this.closed = true
+    if (typeof this.onClose === 'function') {
+      this.onClose(this)
+    }
   }
-  @Watch('visible')
-  onChangeRoxute(newRoute: any) {
-    console.log('newRoute', newRoute)
+  handleAfterLeave() {
+    this.$destroy()
+    this.$el.parentNode && this.$el.parentNode.removeChild(this.$el)
   }
-
   @Watch('closed')
   onChangeValue(newVal: boolean) {
     if (newVal) {
       this.visible = false
     }
-  }
-
-  handleAfterLeave() {
-    this.$destroy()
-    this.$el.parentNode && this.$el.parentNode.removeChild(this.$el)
-  }
-
-  close() {
-    this.closed = true
-    console.log('xxx', this.closed)
-
-    // if (typeof this.onClose === 'function') {
-    //   this.onClose(this)
-    // }
   }
 }
 </script>
@@ -81,7 +93,7 @@ export default class MliMessage extends Vue {
   border-color: #ebeef5;
   position: fixed;
   left: 50%;
-  top: 100px;
+  top: 20px;
   transform: translateX(-50%);
   background-color: #edf2fc;
   transition: opacity 0.3s, transform 0.4s, top 0.4s;
@@ -156,7 +168,7 @@ export default class MliMessage extends Vue {
 
 .mli-message-fade-enter,
 .mli-message-fade-leave-active {
-  transform: translate(-50%, -100px);
+  transform: translate(-50%, -100%);
   opacity: 0;
 }
 </style>
