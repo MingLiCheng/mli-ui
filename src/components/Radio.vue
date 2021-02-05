@@ -1,12 +1,13 @@
 <template>
-  <label class="mli-radio" :class="{ 'is-checked': model === label }" role="radio">
-    <span :class="['mli-radio__input', { 'is-checked': model === label }]">
+  <label class="mli-radio" :class="{ 'is-checked': model === label, 'is-disabled': disabled }" role="radio">
+    <span :class="['mli-radio__input', { 'is-checked': model === label, 'is-disabled': disabled }]">
       <span class="mli-radio__inner"></span>
       <input
         ref="radio"
         class="mli-raido__original"
         :value="label"
         v-model="model"
+        :disabled="disabled"
         aria-hidden="true"
         type="radio"
         tabindex="-1"
@@ -26,6 +27,7 @@ import { Vue, Component, Prop, Emit } from 'vue-property-decorator'
 export default class MliRadio extends Vue {
   @Prop({ type: [String, Boolean, Number], default: '' }) private value!: string
   @Prop({ type: [String, Boolean, Number], default: '' }) private label!: string
+  @Prop(Boolean) private disabled!: boolean
 
   /** change 这样就可以得到一个提示 */
   @Emit('change')
@@ -61,8 +63,15 @@ export default class MliRadio extends Vue {
   font-size: 14px;
   margin-right: 30px;
   user-select: none;
+  border: 1px solid hotpink;
   &.is-checked {
     color: #409eff;
+  }
+  &.is-disabled {
+    cursor: not-allowed;
+    .mli-radio__label {
+      color: #c0c4cc;
+    }
   }
   &__input {
     white-space: nowrap;
@@ -81,8 +90,28 @@ export default class MliRadio extends Vue {
         }
       }
     }
+    &.is-disabled {
+      .mli-radio__inner {
+        background-color: #f5f7fa;
+        border-color: #e4e7ed;
+        cursor: not-allowed;
+        &:after {
+          cursor: not-allowed;
+          background-color: #f5f7fa;
+        }
+        &:hover {
+          border-color: #e4e7ed;
+        }
+      }
+      &.is-checked {
+        .mli-radio__inner {
+          &:after {
+            background-color: #c0c4cc;
+          }
+        }
+      }
+    }
     .mli-radio__inner {
-      pointer-events: none;
       border: 1px solid #dcdfe6;
       border-radius: 100%;
       width: 14px;
@@ -109,6 +138,7 @@ export default class MliRadio extends Vue {
       }
     }
     .mli-raido__original {
+      line-height: 1;
       opacity: 0;
       outline: none;
       position: absolute;
