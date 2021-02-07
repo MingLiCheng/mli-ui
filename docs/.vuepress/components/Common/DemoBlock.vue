@@ -45,6 +45,7 @@ export default class DemoBlock extends Vue {
 
 <style lang="less" scoped>
 .demo-block {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;

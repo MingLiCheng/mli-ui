@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   locales: { '/': { lang: 'zh-CN' } },
-  title: 'Hello VuePress',
-  description: 'Just playing around',
+  title: 'Hello MliUI',
+  description: 'MliUI,Hello MliUI,Vue,UI',
   themeConfig: {
     logo: '/images/logo.png',
     nav: [

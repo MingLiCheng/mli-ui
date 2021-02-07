@@ -1,7 +1,7 @@
 ---
 
 pageClass: custom-page-class
-title: 组件-----
+title: 组件
 
 ---
 
