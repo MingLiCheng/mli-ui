@@ -2,8 +2,9 @@ const path = require('path')
 
 module.exports = {
   locales: { '/': { lang: 'zh-CN' } },
-  title: 'Hello MliUI',
+  title: 'MliUI',
   description: 'MliUI,Hello MliUI,Vue,UI',
+  head: [['link', { rel: 'shortcut icon', type: 'image/x-icon', href: `./favicon.ico` }]],
   themeConfig: {
     logo: '/images/logo.png',
     nav: [
@@ -14,7 +15,7 @@ module.exports = {
     ],
     sidebar: {
       '/component/': [{ title: '组件', collapsable: false, children: ['/component/', 'button'] }],
-      '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/'] }],
+      '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
       '/blog/': [{ title: '博客', collapsable: false, children: ['/blog/'] }]
     }
   },
