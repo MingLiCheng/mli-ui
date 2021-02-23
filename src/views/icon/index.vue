@@ -30,6 +30,7 @@ import Clipboard from 'clipboard'
 import { Component, Vue } from 'vue-property-decorator'
 import Icon from '@/components/Icon.vue'
 import MliButton from '@/components/Button.vue'
+import MliMessage from '@/components/message/message'
 import iconList from './icon-all'
 @Component({
   components: { Icon, MliButton }
@@ -39,6 +40,10 @@ export default class IconPage extends Vue {
 
   clipboardSuccess(e: Clipboard.Event) {
     console.log('e', e)
+    MliMessage({
+      type: 'success',
+      message: '复制成功' + ' ' + e.text
+    })
   }
 }
 </script>
