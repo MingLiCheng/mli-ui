@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 declare module '*.vue' {
   import Vue from 'vue'
   export default Vue

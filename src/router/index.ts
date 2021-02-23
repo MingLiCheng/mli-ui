@@ -38,6 +38,16 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "button" */ '../views/checkbox/index.vue')
   },
   {
+    path: '/fileupload',
+    name: 'fileupload',
+    component: () => import(/* webpackChunkName: "button" */ '../views/fileupload/index.vue')
+  },
+  {
+    path: '/link',
+    name: 'link',
+    component: () => import(/* webpackChunkName: "button" */ '../views/link/index.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
