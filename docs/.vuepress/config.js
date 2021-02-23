@@ -16,7 +16,7 @@ module.exports = {
     sidebar: {
       '/component/': [{ title: '组件', collapsable: false, children: ['/component/', 'button'] }],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
-      '/blog/': [{ title: '博客', collapsable: false, children: ['/blog/'] }]
+      '/blog/': [{ title: '博客', collapsable: false, children: ['/blog/', 'fileupload', 'quill'] }]
     }
   },
   configureWebpack: {
