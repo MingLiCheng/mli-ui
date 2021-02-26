@@ -2,13 +2,15 @@
   <div class="custom-theme-components-home">
     <div class="box">
       <div class="left">
-        <transitionGroup name="fade" appear>
-          <h1 class="title" key="h1">{{ pageInfo.heroText }}</h1>
-          <p class="description" key="description">{{ pageInfo.tagline }}</p>
-          <p v-if="pageInfo.actionText && pageInfo.actionLink" class="action" key="action">
-            <NavLink class="action-button" :item="actionLink" />
-          </p>
-        </transitionGroup>
+        <transition name="fade">
+          <span v-if="isShowTran">
+            <h1 class="title" key="h1">{{ pageInfo.heroText }}</h1>
+            <p class="description" key="description">{{ pageInfo.tagline }}</p>
+            <p v-if="pageInfo.actionText && pageInfo.actionLink" class="action" key="action">
+              <NavLink class="action-button" :item="actionLink" />
+            </p>
+          </span>
+        </transition>
       </div>
       <div class="right"></div>
     </div>
@@ -25,6 +27,7 @@ import { Vue, Component } from 'vue-property-decorator'
   components: { NavLink }
 })
 export default class Home extends Vue {
+  isShowTran = false
   get pageInfo() {
     return this.$page.frontmatter
   }
@@ -34,11 +37,15 @@ export default class Home extends Vue {
       text: this.pageInfo.actionText
     }
   }
+
+  mounted() {
+    this.isShowTran = true
+  }
 }
 </script>
 
 
-<style lang="less">
+<style lang="less" scoped>
 .custom-theme-components-home {
   .box {
     padding-top: 3.6rem;
@@ -53,7 +60,8 @@ export default class Home extends Vue {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      * {
+      h1,
+      p {
         transform: translateY(0rem);
       }
       .action-button {
@@ -94,7 +102,7 @@ export default class Home extends Vue {
   @media (max-width: 719px) {
     .box {
       flex-direction: column;
-      .right{
+      .right {
         margin-left: 12px;
       }
     }
