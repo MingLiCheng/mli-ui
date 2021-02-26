@@ -11,12 +11,14 @@ module.exports = {
       { text: '指南', link: '/guide/' },
       { text: '组件', link: '/component/' },
       { text: '博客', link: '/blog/' },
+      { text: '面试', link: '/interview/' },
       { text: 'GitHub', link: 'https://github.com/MingLiCheng' }
     ],
     sidebar: {
       '/component/': [{ title: '组件', collapsable: false, children: ['/component/', 'button'] }],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
-      '/blog/': [{ title: '博客', collapsable: false, children: ['/blog/', 'fileupload', 'quill'] }]
+      '/blog/': [{ title: '博客', collapsable: false, children: ['/blog/', 'fileupload', 'quill'] }],
+      '/interview/': [{ title: '面试', collapsable: false, children: ['/interview/', 'html', 'css'] }]
     }
   },
   configureWebpack: {

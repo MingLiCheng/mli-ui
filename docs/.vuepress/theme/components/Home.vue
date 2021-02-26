@@ -94,6 +94,9 @@ export default class Home extends Vue {
   @media (max-width: 719px) {
     .box {
       flex-direction: column;
+      .right{
+        margin-left: 12px;
+      }
     }
   }
 }
