@@ -1,3 +1,4 @@
+/* eslint-disable */
 !(function(c) {
   var l,
     h,

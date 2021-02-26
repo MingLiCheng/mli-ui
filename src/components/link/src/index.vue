@@ -13,8 +13,9 @@
 
 <script lang="ts">
 import { Vue, Component, Prop, Emit } from 'vue-property-decorator'
+import { PluginObject } from 'vue'
 @Component({})
-export default class MliLink extends Vue {
+export default class MliLink extends Vue implements PluginObject<any> {
   @Prop(String) type!: string
   @Prop(Boolean) disabled!: boolean
   @Prop(String) href!: string
@@ -24,6 +25,7 @@ export default class MliLink extends Vue {
   @Emit('click') emitClick(e: Event) {
     return e
   }
+  install!: any
 
   handleClick(e: Event) {
     if (!this.disabled) {

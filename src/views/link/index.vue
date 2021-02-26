@@ -23,7 +23,7 @@
     </div>
 
     <div style="margin: 20px; padding: 20px; border: 1px solid #eaeefb">
-      <MliInput v-model="inputValue" placeholder="请输入内容"></MliInput>
+      <MliInput v-model="inputValue" search placeholder="请输入内容"></MliInput>
     </div>
   </section>
 </template>
