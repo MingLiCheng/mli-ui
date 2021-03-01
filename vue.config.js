@@ -44,11 +44,6 @@ module.exports = {
             priority: -20,
             chunks: 'initial',
             reuseExistingChunk: true
-          },
-          antdvue: {
-            name: 'chunk-antdvue', // split antdvue into a single package
-            priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
-            test: /[\\/]node_modules[\\/]_?ant-design-vue(.*)/ // in order to adapt to cnpm
           }
         }
       })
