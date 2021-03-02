@@ -20,7 +20,6 @@ const components = [
   MliCheckbox,
   MliCheckboxGroup,
   MliInput,
-  MliMessage,
   MliCarousel,
   MliCarouselItem
 ]

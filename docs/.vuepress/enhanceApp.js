@@ -1,11 +1,9 @@
 /**
  * 扩展 VuePress 应用
  */
-import VueHighlightJS from 'vue-highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
 import './public/fonts/iconfont.css' // 字体
 // import '../.vuepress/public/css/index.css'
-import MliUi from "../../src/components/index"
+import MliUi from '../../src/components/index'
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
   options, // 附加到根实例的一些选项
@@ -14,6 +12,8 @@ export default ({
   isServer // 当前应用配置是处于 服务端渲染 或 客户端
 }) => {
   // ...做一些其他的应用级别的优化
-  Vue.use(VueHighlightJS)
   Vue.use(MliUi)
+  // Vue.$message = Vue.prototype.$message
+  // console.log('Vue.$message', Vue.$message)
+  
 }

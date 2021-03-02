@@ -1,8 +1,3 @@
----
-title: icon
----
-## MliIcon
-
 <template>
   <div class="all">
     <ul>
