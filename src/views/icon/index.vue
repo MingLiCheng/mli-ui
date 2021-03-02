@@ -28,22 +28,14 @@
 <script lang="ts">
 import Clipboard from 'clipboard'
 import { Component, Vue } from 'vue-property-decorator'
-import Icon from '@/components/Icon.vue'
-import MliButton from '@/components/Button.vue'
-import MliMessage from '@/components/message/message'
 import iconList from './icon-all'
-@Component({
-  components: { Icon, MliButton }
-})
+@Component({})
 export default class IconPage extends Vue {
   private iconList = iconList
 
   clipboardSuccess(e: Clipboard.Event) {
     console.log('e', e)
-    MliMessage({
-      type: 'success',
-      message: '复制成功' + ' ' + e.text
-    })
+    this.$message.success('复制成功' + ' ' + e.text)
   }
 }
 </script>

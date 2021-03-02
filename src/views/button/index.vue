@@ -78,10 +78,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import MliButton from '@/components/Button.vue'
-@Component({
-  components: { MliButton }
-})
+@Component({})
 export default class ButtonPage extends Vue {
   test(e: Event, y: string) {
     console.log('e', e, 'y', y)

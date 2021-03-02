@@ -101,7 +101,7 @@ export default class MliCheckbox extends Vue {
 </script>
 
 <style lang="less">
-@import '@/assets/styles/_variable.less';
+@import '../../..//assets/styles/_variable.less';
 .mli-checkbox {
   // line-height: 1;
   position: relative;

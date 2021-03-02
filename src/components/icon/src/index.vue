@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
-export default class Icon extends Vue {
+export default class MliIcon extends Vue {
   @Prop({ type: String, default: '' }) private name!: string
 }
 </script>

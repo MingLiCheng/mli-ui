@@ -1,6 +1,5 @@
 ---
 title: 'button'
-pageClass: custom-page-xxx
 ---
 # button
 

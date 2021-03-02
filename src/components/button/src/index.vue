@@ -46,7 +46,7 @@ export default class MliButton extends Vue {
 </script>
 
 <style lang="less">
-@import url('../../../src/assets/styles/_variable.less');
+@import url('../../../assets/styles/_variable.less');
 .mli-button {
   display: inline-block;
   line-height: 1;

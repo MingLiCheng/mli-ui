@@ -40,5 +40,4 @@ title: '欢迎'
 ```
 :::
 ::: details 点击查看代码
-<<<./docs/.vuepress/components/MliButton.vue
 :::

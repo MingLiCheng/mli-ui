@@ -3,7 +3,6 @@
     <h1>Hello Message Page</h1>
     <div class="box"></div>
 
-    <div @click="test">按钮</div>
     <div @click="colse">关闭</div>
     <div style="margin: 20px; border: 1px solid #eaeefb; padding:20px">
       <MliButton type="success" @click="showMessage('success')">成功</MliButton>
@@ -23,31 +22,19 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import MliMessage from '@/components/message/Message.vue'
-import MliButton from '@/components/Button.vue'
-import Message from '@/components/message/message'
-@Component({ components: { MliMessage, MliButton } })
+@Component({})
 export default class MessagePage extends Vue {
   private visible = false
   private messageInstance?: any
   showMessage(type: any, options: any = {}) {
-    Message({
+    this.$message({
       ...options,
       type: type,
       message: '消息提示'
     })
   }
-  test() {
-    this.messageInstance = Message({
-      message: 'xxxx'
-    })
-  }
   colse() {
     this.messageInstance.close()
-  }
-  created() {
-    console.log('MliMessage', MliMessage)
-    console.log('Message', Message)
   }
 }
 </script>

@@ -8,11 +8,8 @@
 </template>
 
 <script lang="ts">
-import MliLink from '@/components/link/index'
 import { Vue, Component } from 'vue-property-decorator'
-@Component({
-  components: { MliLink }
-})
+@Component({})
 export default class FileUpload extends Vue {
   async test(e: any) {
     console.log('e', e)

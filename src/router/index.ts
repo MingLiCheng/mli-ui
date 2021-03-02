@@ -18,6 +18,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "button" */ '../views/icon/index.vue')
   },
   {
+    path: '/carousel',
+    name: 'carousel',
+    component: () => import(/* webpackChunkName: "carousel" */ '../views/carousel/index.vue')
+  },
+  {
     path: '/button',
     name: 'Button',
     component: () => import(/* webpackChunkName: "button" */ '../views/button/index.vue')

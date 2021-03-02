@@ -29,12 +29,8 @@
 </template>
 
 <script lang="ts">
-import MliLink from '@/components/link'
-import MliInput from '@/components/input'
 import { Vue, Component } from 'vue-property-decorator'
-@Component({
-  components: { MliLink, MliInput }
-})
+@Component({})
 export default class MliLinkPage extends Vue {
   private inputValue = ''
 }

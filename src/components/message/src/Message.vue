@@ -83,7 +83,7 @@ export default class MliMessage extends Vue {
 </script>
 
 <style lang="less">
-@import url('@/assets/styles/_variable.less');
+@import url('../../../assets/styles/_variable.less');
 .mli-message {
   min-width: 380px;
   box-sizing: border-box;

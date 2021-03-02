@@ -19,9 +19,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import MliCheckbox from '@/components/checkbox/Checkbox.vue'
-import MliCheckboxGroup from '@/components/checkbox/CheckboxGroup.vue'
-@Component({ components: { MliCheckbox, MliCheckboxGroup } })
+@Component({})
 export default class CheckboxPage extends Vue {
   private checkbox = true
   private checkboxGroup = []

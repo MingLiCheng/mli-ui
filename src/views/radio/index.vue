@@ -17,8 +17,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import MliRadio from '@/components/Radio.vue'
-@Component({ components: { MliRadio } })
+@Component({})
 export default class RadioPage extends Vue {
   private radio = '2'
 

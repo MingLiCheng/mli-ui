@@ -15,7 +15,7 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/MingLiCheng' }
     ],
     sidebar: {
-      '/component/': [{ title: '组件', collapsable: false, children: ['/component/', 'button'] }],
+      '/component/': [{ title: '组件', collapsable: false, children: ['/component/', 'button', 'icon'] }],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
       '/blog/': [{ title: '博客', collapsable: false, children: ['/blog/', 'fileupload', 'quill'] }],
       '/interview/': [{ title: '面试', collapsable: false, children: ['/interview/', 'html', 'css'] }]

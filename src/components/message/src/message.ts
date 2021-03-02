@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import MliMessage from './Message.vue'
 const MessageConstructor = Vue.extend(MliMessage)
+interface IMessage {
+  (options?: MessageParams): any
+  close(id: string, userOnClose?: ((vm: MessageVNode) => void) | undefined): void
+  [key: string]: any
+}
 interface IMessageOptions {
-  type?: 'success' | 'warning' | 'info' | 'error' | ''
+  type?: 'success' | 'warning' | 'info' | 'error' | '' | string
   visible?: boolean
   message?: string
   id?: string
@@ -14,7 +19,7 @@ type MessageVNode = Vue
 let instance: any
 const instances: Array<typeof instance> = []
 let seed = 1
-const Message = function(options: MessageParams = {} as MessageParams) {
+const Message: IMessage = function(options: MessageParams = {} as MessageParams) {
   if (typeof options === 'string') {
     options = {
       message: options
@@ -40,6 +45,17 @@ const Message = function(options: MessageParams = {} as MessageParams) {
   instances.push(instance)
   return instance
 }
+;(['success', 'warning', 'info', 'error'] as const).forEach((type: string) => {
+  Message[type] = (options: IMessageOptions) => {
+    if (typeof options === 'string') {
+      options = {
+        message: options
+      }
+    }
+    options.type = type
+    return Message(options)
+  }
+})
 
 // 关闭组件后 重设当前显示的组件的样式（top）
 Message.close = function(id: string, userOnClose?: (vm: MessageVNode) => void) {

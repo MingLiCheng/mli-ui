@@ -1,4 +1,4 @@
-import Vue, { DirectiveOptions } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -6,18 +6,10 @@ import store from './store'
 import 'normalize.css/normalize.css'
 import '@/assets/styles/fonts/iconfont.css' // 字体
 
-import * as directives from '@/directives'
-import * as filters from '@/filters'
+import MliUi from '@/components'
 
-// register global directives
-Object.keys(directives).forEach(key => {
-  Vue.directive(key, (directives as { [key: string]: DirectiveOptions })[key])
-})
+Vue.use(MliUi)
 
-// register global filters
-Object.keys(filters).forEach(key => {
-  Vue.filter(key, (filters as { [key: string]: Function })[key])
-})
 Vue.config.productionTip = false
 
 new Vue({
