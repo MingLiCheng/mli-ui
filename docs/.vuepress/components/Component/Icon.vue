@@ -3,7 +3,8 @@
     <ul>
       <template v-for="iconItem in iconList">
         <li :key="iconItem" v-clipboard:copy="iconItem" v-clipboard:success="clipboardSuccess">
-          <span><MliIcon :name="iconItem"></MliIcon></span>
+          <span><i :class="`mli-icon-${iconItem}`"></i></span>
+          <!-- <MliIcon :name="iconItem"></MliIcon> 这里面 好像不能这样使用全局组件 打包之后无法编译 -->
           <span> {{ iconItem }} </span>
         </li>
       </template>
@@ -22,12 +23,7 @@ export default {
   },
   methods: {
     clipboardSuccess(e) {
-      console.log('e', e, this)
-      // this.$refs.message1.success('复制成功' + ' ' + e.text)
-      this.$message.success({
-        type: 'success',
-        message: '复制成功' + ' ' + e.text
-      })
+      this.$message.success('复制成功' + ' ' + e.text)
     }
   }
 }

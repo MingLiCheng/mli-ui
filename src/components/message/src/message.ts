@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import MliMessage from './Message.vue'
+import MliMessage from './index.vue'
 const MessageConstructor = Vue.extend(MliMessage)
 interface IMessage {
   (options?: MessageParams): any

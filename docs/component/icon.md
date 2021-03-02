@@ -1,10 +1,27 @@
 ---
-title: icon
+title: Icon 图标
 ---
-## MliIcon
+# MliIcon 图标
+<p>提供了一套常用的图标集合。</p>
 
-<template>
-  <div class="all">
+### 使用方法
+直接通过设置类名为`mli-icon-iconName` 来使用即可。例如
+
+::: demo
+```html
+<i class="mli-icon-favorite-filling"></i>
+<i class="mli-icon-add"></i>
+<i class="mli-icon-adjust"></i>
+<i class="mli-icon-bad"></i>
+
+<MliIcon name="bad"/>
+```
+:::
+
+<Component-Icon></Component-Icon>
+
+<!-- <template>
+  <div class="icon-page">
     <ul>
       <template v-for="iconItem in iconList">
         <li :key="iconItem" v-clipboard:copy="iconItem" v-clipboard:success="clipboardSuccess">
@@ -27,8 +44,6 @@ export default {
   },
   methods: {
     clipboardSuccess(e) {
-      console.log('e', e, this)
-      // this.$refs.message1.success('复制成功' + ' ' + e.text)
       this.$message.success('复制成功' + ' ' + e.text)
     }
   }
@@ -36,22 +51,22 @@ export default {
 </script>
 
 <style lang="less">
-i {
-  color: #606266;
-  margin: 0 20px;
-  font-size: 1.5em;
-  vertical-align: middle;
-}
-
-.case-box {
-  margin: 20px;
-
+.icon-page {
   i {
-    margin: 0px 20px;
+    color: #606266;
+    margin: 0 20px;
+    font-size: 1.5em;
+    vertical-align: middle;
   }
-}
 
-.all {
+  .case-box {
+    margin: 20px;
+
+    i {
+      margin: 0px 20px;
+    }
+  }
+
   ul {
     list-style: none;
     padding: 0px;
@@ -87,6 +102,7 @@ i {
           display: flex;
           align-items: center;
           flex: 1;
+
           i {
             font-size: 28px;
           }
@@ -100,4 +116,4 @@ i {
     }
   }
 }
-</style>
+</style> -->
