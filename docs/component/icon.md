@@ -29,10 +29,7 @@ export default {
     clipboardSuccess(e) {
       console.log('e', e, this)
       // this.$refs.message1.success('复制成功' + ' ' + e.text)
-      this.$message.success({
-        type: 'success',
-        message: '复制成功' + ' ' + e.text
-      })
+      this.$message.success('复制成功' + ' ' + e.text)
     }
   }
 }

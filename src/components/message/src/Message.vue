@@ -92,6 +92,7 @@ export default class MliMessage extends Vue {
   border-style: solid;
   border-color: #ebeef5;
   position: fixed;
+  z-index: 999;
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
