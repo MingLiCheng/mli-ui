@@ -1,5 +1,5 @@
 <template>
-  <div class="all">
+  <div class="icon-page">
     <ul>
       <template v-for="iconItem in iconList">
         <li :key="iconItem" v-clipboard:copy="iconItem" v-clipboard:success="clipboardSuccess">
@@ -30,22 +30,21 @@ export default {
 </script>
 
 <style lang="less">
-i {
-  color: #606266;
-  margin: 0 20px;
-  font-size: 1.5em;
-  vertical-align: middle;
-}
-
-.case-box {
-  margin: 20px;
-
+.icon-page {
   i {
-    margin: 0px 20px;
+    color: #606266;
+    margin: 0 20px;
+    font-size: 1.5em;
+    vertical-align: middle;
   }
-}
 
-.all {
+  .case-box {
+    margin: 20px;
+
+    i {
+      margin: 0px 20px;
+    }
+  }
   ul {
     list-style: none;
     padding: 0px;
