@@ -71,3 +71,21 @@ title: 'Button 按钮'
 </template>
 ```
 :::
+
+### Attributes
+
+|   参数   |     说明     |  类型   |               可选值                | 默认值 |
+| :------: | :----------: | :-----: | :---------------------------------: | ------ |
+|   type   |     类型     | string  | primary/success/warning/danger/info | -      |
+|  plain   | 是否朴素按钮 | boolean |                  —                  | false  |
+|  round   | 是否圆角按钮 | boolean |                  —                  | false  |
+|  circle  | 是否圆形按钮 | boolean |                  —                  | false  |
+| disabled | 是否禁用状态 | boolean |                  —                  | false  |
+|   icon   |   图标类名   | string  |                  —                  | —      |
+
+<style>
+table {
+  display: table;
+  width: 100%;
+}
+</style>

@@ -36,6 +36,8 @@ title: '介绍'
 
 
 ### vuepress-plugin-demo-container 插件
+> github: [https://github.com/calebman/vuepress-plugin-demo-container](https://github.com/calebman/vuepress-plugin-demo-container)<br>
+> docs: [https://docs.chenjianhui.site/vuepress-plugin-demo-container/zh/](https://docs.chenjianhui.site/vuepress-plugin-demo-container/zh/)
 
 ::: demo 此处放置代码示例的描述信息，支持 `Markdown` 语法，**描述信息只支持单行**
 ```html

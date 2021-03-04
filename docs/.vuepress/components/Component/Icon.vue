@@ -31,6 +31,7 @@ export default {
 
 <style lang="less">
 .icon-page {
+  // border: 1px solid #eee;
   i {
     color: #606266;
     margin: 0 20px;
@@ -48,24 +49,35 @@ export default {
   ul {
     list-style: none;
     padding: 0px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #eee;
+    // margin: 0 auto;
+    // border: 1px solid #eee;
     border-right: none;
+    border-bottom: none;
+    width: 100%;
+    margin-right: -1px;
+    display: flex;
     flex-wrap: wrap;
-    width: 666px;
+
+    // display: grid;
+    // grid-template-columns: repeat(8, 12.5%);
+    // grid-template-rows: repeat(122px);
+    // grid-template-columns: 150px 150px 150px;
+    // grid-template-rows: 150px 150px 150px;
 
     li {
-      width: 132.8px;
-      height: 120px;
-      border-right: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+      // width: 100%;
+      // border-right: 1px solid #eee;
+      // border-bottom: 1px solid #eee;
+      width: calc(12.5% + 1px);
+      min-width: 110px;
+      height: 122px;
+      border: 1px solid #eee;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      margin-right: -1px;
+      margin-bottom: -1px;
 
       &:hover {
         color: #5cb6ff;
@@ -81,13 +93,14 @@ export default {
           align-items: center;
           flex: 1;
           i {
-            font-size: 28px;
+            font-size: 32px;
           }
         }
 
         &:last-of-type {
-          height: 50px;
+          height: 32px;
           font-size: 12px;
+          text-align: center;
         }
       }
     }
