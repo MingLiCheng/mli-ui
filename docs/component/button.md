@@ -83,6 +83,29 @@ title: 'Button 按钮'
 | disabled | 是否禁用状态 | boolean |                  —                  | false  |
 |   icon   |   图标类名   | string  |                  —                  | —      |
 
+
+```html
+<script lang="ts">
+import { Vue, Component, Prop, Emit } from 'vue-property-decorator'
+
+@Component
+export default class MliButton extends Vue {
+  @Prop({ type: String, default: '' }) private icon!: string
+  @Prop({ type: String, default: 'default' }) private type!: string
+  @Prop(Boolean) private plain!: boolean
+  @Prop(Boolean) private loading!: boolean
+  @Prop(Boolean) private disabled!: boolean | string
+  @Prop(Boolean) private round!: boolean
+  @Prop(Boolean) private circle!: boolean
+  // eslint-disable-next-line
+  @Emit('click') private handleClick(e: Event) {}
+
+  get buttonDisabled() {
+    return this.disabled
+  }
+}
+</script>
+```
 <style>
 table {
   display: table;

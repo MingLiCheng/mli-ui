@@ -22,6 +22,11 @@ export default class MliCheckbox extends Vue {
   @Prop({ type: [String, Number] }) private falseLabel!: string | number
   @Prop(Boolean) private checked!: boolean
 
+  @Emit('change')
+  emitChange(value: any) {
+    return value
+  }
+
   private checkboxGroup?: Vue
   private selfModel = false
 
@@ -75,11 +80,6 @@ export default class MliCheckbox extends Vue {
 
   get store() {
     return this.checkboxGroup ? (this.checkboxGroup as any).value : this.value
-  }
-
-  @Emit('change')
-  emitChange(value: any) {
-    return value
   }
 
   handleChange(e: Event) {

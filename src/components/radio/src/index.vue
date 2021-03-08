@@ -63,7 +63,7 @@ export default class MliRadio extends Vue {
   font-size: 14px;
   margin-right: 30px;
   user-select: none;
-  border: 1px solid hotpink;
+  // border: 1px solid hotpink;
   &.is-checked {
     color: #409eff;
   }
