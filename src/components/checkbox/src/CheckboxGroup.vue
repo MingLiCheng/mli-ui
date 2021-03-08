@@ -4,19 +4,21 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component, Emit, Prop } from 'vue-property-decorator'
-@Component
-export default class MliCheckboxGroup extends Vue {
-  @Prop(Array) private value!: Array<string | number>
-  @Emit('input')
-  emitInput(value: any) {
-    return value
-  }
-
-  @Emit('change')
-  emitChange(value: any) {
-    return value
+<script>
+export default {
+  name: 'MliCheckboxGroup',
+  props: {
+    value: {
+      type: Array
+    }
+  },
+  methods: {
+    emitInput(value) {
+      this.$emit('input', value)
+    },
+    emitChange(value) {
+      this.$emit('change', value)
+    }
   }
 }
 </script>
