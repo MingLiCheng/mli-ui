@@ -47,7 +47,7 @@ export default {
 export default {
   data() {
     return {
-      checkboxGroup: []
+      checkboxGroup: ['1']
     }
   },
   methods: {
