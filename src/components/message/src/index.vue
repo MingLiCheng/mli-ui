@@ -40,7 +40,7 @@ export default class MliMessage extends Vue {
   private showClose = false
   private verticalOffset = 20
   private onClose: null | Function = null
-  private duration = 2000
+  private duration = 2500
   private timer: any = null
 
   mounted() {

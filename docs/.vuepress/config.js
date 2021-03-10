@@ -27,7 +27,16 @@ module.exports = {
         {
           title: '博客',
           collapsable: false,
-          children: ['/blog/', 'promise', 'closure', 'fileupload', 'quill', 'call_apply_bind', 'eventhub']
+          children: [
+            '/blog/',
+            'promise',
+            'closure',
+            'fileupload',
+            'quill',
+            'call_apply_bind',
+            'eventhub',
+            'weapp-js-sdk'
+          ]
         }
       ]
       // '/interview/': [{ title: '面试', collapsable: false, children: ['/interview/', 'html', 'css', 'promise'] }]
