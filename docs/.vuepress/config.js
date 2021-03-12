@@ -24,6 +24,9 @@ module.exports = {
       ],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
       '/blog/': [
+        { title: 'JavaScript', collapsable: false },
+        { title: 'HTML', collapsable: false },
+        { title: 'CSS', collapsable: false },
         {
           title: '博客',
           collapsable: false,
@@ -36,6 +39,17 @@ module.exports = {
             'call_apply_bind',
             'eventhub',
             'weapp-js-sdk'
+          ]
+        },
+        {
+          title: '微信',
+          collapsable: false,
+          children: [
+            {
+              title: '小程序',
+              collapsable: false
+            },
+            'weixin/mini/charts'
           ]
         }
       ]
