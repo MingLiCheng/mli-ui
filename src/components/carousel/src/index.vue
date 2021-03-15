@@ -36,13 +36,16 @@ export default class MliCarousel extends Vue {
   }
 
   handleLastClick() {
-    console.log('laset')
-    this.activeIndex > 1 ? this.activeIndex-- : (this.activeIndex = 3)
+    this.activeIndex--
+    this.items.forEach((element, index) => {
+      element.setItemPostion(index, this.activeIndex)
+    })
   }
 
   handleNextClick() {
+    this.activeIndex++
     this.items.forEach((element, index) => {
-      element.setItemPostion(this.activeIndex + 1, index)
+      element.setItemPostion(index, this.activeIndex)
     })
   }
 
@@ -50,14 +53,9 @@ export default class MliCarousel extends Vue {
     return `transform: translateX(${this.translateX}px)`
   }
 
-  @Watch('activeIndex', { immediate: true })
-  activeIndexWatch(newVal: number, oldVal: number) {
-    // if(newVal == 3) { // 当前是最大的一个 把第一个移动到后面
-
-    // }
-    console.log('new', newVal)
-    console.log('old', oldVal)
-  }
+  // @Watch('activeIndex', { immediate: true })
+  // activeIndexWatch(newVal: number, oldVal: number) {
+  // }
 }
 </script>
 
@@ -69,7 +67,7 @@ export default class MliCarousel extends Vue {
   height: 200px;
   border: 1px solid @color-border;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__item {
     position: absolute;

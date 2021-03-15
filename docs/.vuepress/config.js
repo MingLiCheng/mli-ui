@@ -49,6 +49,7 @@ module.exports = {
               title: '小程序',
               collapsable: false
             },
+            'weixin/mini/research',
             'weixin/mini/charts'
           ]
         }
@@ -59,7 +60,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@styles': path.resolve(__dirname, './styles')
+        '@styles': path.resolve(__dirname, './styles'),
+        '@assets': path.resolve(__dirname, './public')
       }
     }
   },
