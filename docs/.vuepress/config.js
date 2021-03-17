@@ -24,22 +24,17 @@ module.exports = {
       ],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
       '/blog/': [
-        { title: 'JavaScript', collapsable: false },
-        { title: 'HTML', collapsable: false },
-        { title: 'CSS', collapsable: false },
         {
-          title: '博客',
+          title: 'JavaScript',
           collapsable: false,
-          children: [
-            '/blog/',
-            'promise',
-            'closure',
-            'fileupload',
-            'quill',
-            'call_apply_bind',
-            'eventhub',
-            'weapp-js-sdk'
-          ]
+          children: ['javascript/objec_copy', 'javascript/eventhub', 'javascript/promise']
+        },
+        { title: 'HTML', collapsable: false },
+        { title: 'CSS', collapsable: false, children: ['javascript/objec_copy', 'css/variable'] },
+        {
+          title: '插件',
+          collapsable: false,
+          children: ['plugins/quill', 'closure', 'fileupload', 'call_apply_bind', 'weapp-js-sdk']
         },
         {
           title: '微信',
