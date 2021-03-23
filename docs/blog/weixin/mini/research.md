@@ -23,6 +23,8 @@ title: '小程序调研'
 
 - 原生
 > 微信小程序官方提供的框架语法 <br>
+
+
 <!-- ![An image](@assets/images/weixin-01.png) -->
 <img src="@assets/images/weixin-01.png" alt="" style="width: 640px; height:300px">
 
@@ -30,7 +32,9 @@ title: '小程序调研'
 > uni-app 是一个使用` Vue.js`开发跨端应用的框架，团队人员使用vue的开发效率更高。<br>
 > 同时uni-app可以避免针对h5 和 微信小程序做多次开发的问题 <br>
 > uni-app 社区相对也比较成熟 <br>
+> 官网 [https://uniapp.dcloud.io/](https://uniapp.dcloud.io/)
 - 语法<br>
+> 基本和Vue相同具体参考官网文档
 
 ## 面向业务的调研
 > 根据相关业务功能 进行调研Demo开发，并输出相关过程
