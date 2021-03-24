@@ -29,12 +29,12 @@ module.exports = {
           collapsable: false,
           children: ['javascript/object-visit', 'javascript/objec_copy', 'javascript/eventhub', 'javascript/promise']
         },
-        { title: 'HTML', collapsable: false },
+        { title: 'HTML', collapsable: false, children:['html/url'] },
         { title: 'CSS', collapsable: false, children: ['javascript/objec_copy', 'css/variable'] },
         {
           title: '插件',
           collapsable: false,
-          children: ['plugins/quill', 'closure', 'fileupload', 'call_apply_bind']
+          children: ['plugins/webpack-loader', 'plugins/quill', 'closure', 'fileupload', 'call_apply_bind']
         },
         {
           title: '微信',
