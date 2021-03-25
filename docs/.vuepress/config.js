@@ -46,7 +46,8 @@ module.exports = {
               collapsable: false
             },
             'weixin/mini/research',
-            'weixin/mini/charts'
+            'weixin/mini/charts',
+            'weixin/mini/jsencrypt'
           ]
         }
       ]
