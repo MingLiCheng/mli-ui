@@ -3,6 +3,14 @@ title: 'Webpack Loader 整理'
 ---
 
 # Webpack Loader 整理
+
+> webpack打包流程： 读取webpack的相关配置参数，启动webpack，创建Compiler 对象开始解析项目，从入口文件开始解析，找到其导入的依赖模块，递归遍历分析，形成依赖关系树,
+> 对于不同文件类型的依赖模块webpack会启动对应的Loader进行编译，最终转化为javascript文件，整个过程webpack会向外暴漏一些钩子函数，webpack的插件可以通过监听这些函数在整个编译过
+> 做一些处理来干预输出结果。<br>
+> 常用的loader:  vue-loader, style-loader, less-loader, file-loader, url-loader, ts-loader, babel-loader <br>
+> 常用的plugin:  html-webapck-plugin, clean-webpack-plugin, mini-css-extract-plugin(独立出一个css), extract-text-webpack-plugin(拆分css), webpack-bundle-analyzer
+
+
 - 此篇整理介绍常用的 webpack loader 
 - 首先要了解webpack的打包原理
   - 识别入口文件
