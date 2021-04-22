@@ -39,7 +39,7 @@ module.exports = {
         {
           title: '技术型',
           collapsable: false,
-          children: ['technology/qcode-login']
+          children: ['technology/qcode-login', 'technology/web-security']
         },
         {
           title: '微信',
