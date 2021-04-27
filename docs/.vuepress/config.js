@@ -32,6 +32,11 @@ module.exports = {
         { title: 'HTML', collapsable: false, children: ['html/url'] },
         { title: 'CSS', collapsable: false, children: ['javascript/objec_copy', 'css/variable'] },
         {
+          title: 'Vue',
+          collapsable: false,
+          children: [{ title: 'element-ui', collapsable: false }, 'vue/element/table_header_icon']
+        },
+        {
           title: '插件',
           collapsable: false,
           children: ['plugins/webpack-loader', 'plugins/quill', 'closure', 'fileupload', 'call_apply_bind']
