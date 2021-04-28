@@ -34,7 +34,7 @@ module.exports = {
         {
           title: 'Vue',
           collapsable: false,
-          children: [{ title: 'element-ui', collapsable: false }, 'vue/element/table_header_icon']
+          children: [{ title: 'element-ui', collapsable: false }, 'vue/element/table_header_icon', 'vue/vue3_study']
         },
         {
           title: '插件',
