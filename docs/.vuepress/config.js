@@ -34,7 +34,14 @@ module.exports = {
         {
           title: 'Vue',
           collapsable: false,
-          children: [{ title: 'element-ui', collapsable: false }, 'vue/element/table_header_icon', 'vue/vue3_study']
+          children: [
+            'vue/vue_react',
+            'vue/vue3_study',
+            { title: 'element-ui', collapsable: false },
+            'vue/element/table_header_icon',
+            { title: 'axios', collapsable: false },
+            'vue/axios/file_download'
+          ]
         },
         {
           title: '插件',
