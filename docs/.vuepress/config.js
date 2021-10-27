@@ -27,19 +27,32 @@ module.exports = {
         {
           title: 'JavaScript',
           collapsable: false,
-          children: ['javascript/object-visit', 'javascript/objec_copy', 'javascript/eventhub', 'javascript/promise']
+          children: [
+            'javascript/object-visit',
+            'javascript/objec_copy',
+            'javascript/eventhub',
+            'javascript/promise',
+            'javascript/closure'
+          ]
         },
         { title: 'HTML', collapsable: false, children: ['html/url'] },
         { title: 'CSS', collapsable: false, children: ['javascript/objec_copy', 'css/variable'] },
         {
           title: 'Vue',
           collapsable: false,
-          children: [{ title: 'element-ui', collapsable: false }, 'vue/element/table_header_icon', 'vue/vue3_study']
+          children: [
+            'vue/vue_react',
+            'vue/vue3_study',
+            { title: 'element-ui', collapsable: false },
+            'vue/element/table_header_icon',
+            { title: 'axios', collapsable: false },
+            'vue/axios/file_download'
+          ]
         },
         {
           title: '插件',
           collapsable: false,
-          children: ['plugins/webpack-loader', 'plugins/quill', 'closure', 'fileupload', 'call_apply_bind']
+          children: ['plugins/webpack-loader', 'plugins/quill', 'fileupload', 'call_apply_bind']
         },
         {
           title: '技术型',

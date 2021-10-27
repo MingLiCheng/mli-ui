@@ -14,6 +14,7 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
+    'import/no-unresolved': 'off',
     '@typescript-eslint/interface-name-prefix': 0, // 0 = off, 1 = warn, 2 = error
     '@typescript-eslint/no-explicit-any': ['off'],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
