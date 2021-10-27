@@ -1,5 +1,5 @@
 ---
-title: 闭包
+title: 闭包 closure
 ---
 
 # 闭包
