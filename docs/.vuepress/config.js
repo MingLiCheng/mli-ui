@@ -35,6 +35,7 @@ module.exports = {
             'javascript/closure'
           ]
         },
+        { title: '音视频', collapsable: false, children: ['audioAndVideo/webAudioApi']},
         { title: 'HTML', collapsable: false, children: ['html/url'] },
         { title: 'CSS', collapsable: false, children: ['javascript/objec_copy', 'css/variable'] },
         {
