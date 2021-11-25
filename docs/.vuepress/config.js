@@ -24,6 +24,7 @@ module.exports = {
       ],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
       '/blog/': [
+        { title: '项目流程管理', collapsable: false, children: ['project/vue-git']},
         {
           title: 'JavaScript',
           collapsable: false,
