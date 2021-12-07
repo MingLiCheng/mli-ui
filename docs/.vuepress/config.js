@@ -71,6 +71,7 @@ module.exports = {
               title: '小程序',
               collapsable: false
             },
+            'weixin/mini/architecture-design',
             'weixin/mini/research',
             'weixin/mini/charts',
             'weixin/mini/jsencrypt'
