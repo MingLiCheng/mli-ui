@@ -24,7 +24,7 @@ module.exports = {
       ],
       '/guide/': [{ title: '指南', collapsable: false, children: ['/guide/', 'directory-structure'] }],
       '/blog/': [
-        { title: '项目流程管理', collapsable: false, children: ['project/vue-git']},
+        { title: '项目流程管理', collapsable: false, children: ['project/vue-git'] },
         {
           title: 'JavaScript',
           collapsable: false,
@@ -33,7 +33,8 @@ module.exports = {
             'javascript/objec_copy',
             'javascript/eventhub',
             'javascript/promise',
-            'javascript/closure'
+            'javascript/closure',
+            'javascript/treeStructure'
           ]
         },
         { title: '音视频', collapsable: false, children: ['audioAndVideo/webAudioApi'] },
